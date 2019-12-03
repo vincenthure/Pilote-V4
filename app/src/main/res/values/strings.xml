@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Pilote</string>
+    <string name="tab_text_1">CAP</string>
+    <string name="tab_text_2">VISUEL</string>
+    <string name="tab_text_3">REGLAGES</string>
+    <string name="tab_text_4">ASSITANT</string>
+    <string name="btn_moins_10">-10</string>
+    <string name="btn_moins_1">-1</string>
+    <string name="btn_plus_1">+1</string>
+    <string name="btn_plus_10">+10</string>
+    <string name="btn_stanby">Stanby</string>
+    <string name="btn_moins">-</string>
+    <string name="btn_plus">+</string>
+    <string name="pause">En pause</string>
+    <string name="connected">Connecté</string>
+    <string name="disconnected">Connexion interrompue</string>
+    <string name="cap">Cap</string>
+    <string name="kp">Kp :</string>
+    <string name="kd">Ki :</string>
+    <string name="ki">Kd :</string>
+    <string name="pid_cap">Asservissement Cap</string>
+    <string name="pid_verrin">Asservissement Verrin</string>
+    <string name="max">Max :</string>
+    <string name="reset">Restaure les valeurs par defaut</string>
+    <string name="anglebarre">Angle de Barre</string>
+    <string name="val100">100%</string>
+    <string name="frequence">Frq</string>
+    <string name="valide">Valide</string>
+    <string name="assistant">Dans les réglages mettez KI et Kd à zero et augmentez la valeur de Kp jusqu\'à ce que le bateau fasse des lacets. Mesurez alors avec un chronomètre la période de ces lacets. Entrez ces valeurs, validez et saisissez les valeurs proposées dans les réglages.</string>
+
+</resources>
