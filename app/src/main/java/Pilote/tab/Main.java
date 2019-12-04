@@ -137,7 +137,7 @@ public class Main extends AppCompatActivity {
 
         if (mmSocket.isConnected() && btt != null) {
 
-            byte b[]={(byte)c};
+            byte b[]={(byte)Constante.start,(byte)c};
             btt.write(b);
         }
         else {
