@@ -147,18 +147,21 @@ public class Main extends AppCompatActivity {
 
     public static void decode(String line) {
 
+        if( line.length()  <2 )                   return;  // verifie que la ligne contient deux caracteres
+        if( line.charAt(0) != Constante.start )   return;  // verifie le premier caractere
 
         last_time= System.currentTimeMillis();
-        char index = line.charAt( 0 );
+        char index = line.charAt( 1 );
         int param = 0;
-        if (line.length()>1) {
+        if (line.length()>2) {
             try {
-                param = Integer.parseInt( line.substring( 1 ) );
+                param = Integer.parseInt( line.substring( 2 ) );
             } catch (Exception e) {
-                Log.i( "vincent", "Error : parameter not integer" );
+                Log.i( "vincent", "Error : parameter not integer : "+line );
                 return;
             }
         }
+
         switch (index) {
             case Constante.pause:
                 Bip.ring();

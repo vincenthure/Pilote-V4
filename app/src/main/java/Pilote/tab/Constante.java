@@ -22,7 +22,8 @@ public class Constante {
             kd2            = 'L',
             pause          = 'M',
             actif          = 'N',
-            barreMax          = 'O',
+            barreMax       = 'O',
+            start          = 'Z',
 
             cap_moins_10    = 'A',
             cap_moins_1     = 'B',
