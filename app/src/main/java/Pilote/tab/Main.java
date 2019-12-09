@@ -158,11 +158,13 @@ public class Main extends AppCompatActivity {
                 param = Integer.parseInt( line.substring( 2 ) );
             } catch (Exception e) {
                 Log.i( "vincent", "Error : parameter not integer : "+line );
+                if(index==Constante.info) ongletCap.setinfo( line.substring( 2 ) );
                 return;
             }
         }
 
         switch (index) {
+
             case Constante.pause:
                 Bip.ring();
                 ongletCap.setPause(  );
@@ -194,28 +196,9 @@ public class Main extends AppCompatActivity {
                 ongletReglages.setKd( param );
                 break;
 
-            case Constante.kp2:
-                Bip.ring();
-                ongletReglages.setKp2( param );
-                break;
-
-            case Constante.ki2:
-                Bip.ring();
-                ongletReglages.setKi2( param );
-                break;
-
-            case Constante.kd2:
-                Bip.ring();
-                ongletReglages.setKd2( param );
-                break;
-
             case Constante.barreMax:
                 Bip.ring();
                 ongletReglages.setBarreMax( param );
-                break;
-
-            case Constante.tensionMoteur:
-                Graphic.setTensionMoteur( param  );
                 break;
 
             case Constante.capReel:
@@ -232,6 +215,18 @@ public class Main extends AppCompatActivity {
 
             case Constante.redraw:
                 ongletVisuel.redrawGraphic();
+                break;
+
+            case Constante.extend:
+                Graphic.setExtend();
+                break;
+
+            case Constante.retarct:
+                Graphic.setRetract();
+                break;
+
+            case Constante.stop:
+                Graphic.setStop();
                 break;
         }
     }

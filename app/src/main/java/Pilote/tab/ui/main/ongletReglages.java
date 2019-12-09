@@ -35,12 +35,6 @@ public class ongletReglages extends Fragment {
         view.findViewById( R.id.btn_ki_plus).setOnClickListener(ki_plus_Listener);
         view.findViewById( R.id.btn_kd_moins).setOnClickListener(kd_moins_Listener);
         view.findViewById( R.id.btn_kd_plus).setOnClickListener(kd_plus_Listener);
-        view.findViewById( R.id.btn_kp2_moins).setOnClickListener(kp2_moins_Listener);
-        view.findViewById( R.id.btn_kp2_plus).setOnClickListener(kp2_plus_Listener);
-        view.findViewById( R.id.btn_ki2_moins).setOnClickListener(ki2_moins_Listener);
-        view.findViewById( R.id.btn_ki2_plus).setOnClickListener(ki2_plus_Listener);
-        view.findViewById( R.id.btn_kd2_moins).setOnClickListener(kd2_moins_Listener);
-        view.findViewById( R.id.btn_kd2_plus).setOnClickListener(kd2_plus_Listener);
         view.findViewById( R.id.btn_barre_moins).setOnClickListener(barre_moins_Listener);
         view.findViewById( R.id.btn_barre_plus).setOnClickListener(barre_plus_Listener);
         view.findViewById( R.id.reset).setOnClickListener(reset_Listener);
@@ -97,41 +91,6 @@ public class ongletReglages extends Fragment {
         }
     };
 
-    private View.OnClickListener kp2_moins_Listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Main.send( Constante.kp2_moins );
-        }
-    };
-
-    private View.OnClickListener kp2_plus_Listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Main.send( Constante.kp2_plus );
-        }
-    };
-
-    private View.OnClickListener ki2_moins_Listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Main.send( Constante.ki2_moins );
-        }
-    };
-
-    private View.OnClickListener ki2_plus_Listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Main.send( Constante.ki2_plus );
-        }
-    };
-
-    private View.OnClickListener kd2_moins_Listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Main.send( Constante.kd2_moins );
-        }
-    };
-
     private View.OnClickListener reset_Listener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -139,12 +98,6 @@ public class ongletReglages extends Fragment {
         }
     };
 
-    private View.OnClickListener kd2_plus_Listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Main.send( Constante.kd2_plus );
-        }
-    };
 
     private View.OnClickListener barre_moins_Listener = new View.OnClickListener() {
         @Override
@@ -176,24 +129,6 @@ public class ongletReglages extends Fragment {
 
         ((TextView) view.findViewById(R.id.text_Kd)).setText( R.string.kd );
         ((TextView) view.findViewById(R.id.text_Kd)).append( " "+val );
-    };
-
-    static public void setKp2( int val) {
-
-        ((TextView) view.findViewById(R.id.text_Kp2)).setText( R.string.kp );
-        ((TextView) view.findViewById(R.id.text_Kp2)).append( " "+val );
-    };
-
-    static public void setKi2( int val) {
-
-        ((TextView) view.findViewById(R.id.text_Ki2)).setText( R.string.ki );
-        ((TextView) view.findViewById(R.id.text_Ki2)).append( " "+val );
-    };
-
-    static public void setKd2( int val) {
-
-        ((TextView) view.findViewById(R.id.text_Kd2)).setText( R.string.kd );
-        ((TextView) view.findViewById(R.id.text_Kd2)).append( " "+val );
     };
 
     static public void setBarreMax( int val) {

@@ -18,8 +18,7 @@
     <string name="kp">Kp :</string>
     <string name="kd">Ki :</string>
     <string name="ki">Kd :</string>
-    <string name="pid_cap">Asservissement Cap</string>
-    <string name="pid_verrin">Asservissement Verrin</string>
+    <string name="pid_cap">Asservissement</string>
     <string name="max">Max :</string>
     <string name="reset">Restaure les valeurs par defaut</string>
     <string name="anglebarre">Angle de Barre</string>

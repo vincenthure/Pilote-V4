@@ -18,8 +18,9 @@ public class Graphic extends RelativeLayout {
         angleBarre     = Math.toRadians(0),
         angleBarreReel = Math.toRadians(0);
 
-    private static int
-        tensionMoteur  = 0;
+
+    private static boolean  extend,
+                            retract;
 
     public Graphic(Context context) {
         super(context);
@@ -40,10 +41,12 @@ public class Graphic extends RelativeLayout {
     protected void onDraw(Canvas canvas) {
 
         int xCenter    = getWidth()/2;
+        int xGauche    = getWidth()/4;
+        int xDroite    = getWidth()*3/4;
         int yCenter    = getHeight()*2/5;
         int yFooter    = getHeight()*7/8;
         int rayon      = getWidth()/3;
-        int tensionMax = getWidth()*5/12;
+
 
         int xCap       = (int)(Math.sin(cap) *rayon);
         int yCap       = (int)(Math.cos(cap) *rayon);
@@ -58,7 +61,6 @@ public class Graphic extends RelativeLayout {
         int xBarre     = (int)(Math.sin(angleBarre+capReel+Math.PI)*rayon*0.4);
         int yBarre     = (int)(Math.cos(angleBarre+capReel+Math.PI)*rayon*0.4);
 
-        int line_tension_moteur = tensionMoteur * tensionMax / 255;
 
         //cap
         canvas.drawLine( xCenter, yCenter, xCenter+xCap, yCenter-yCap, paint1);
@@ -68,8 +70,10 @@ public class Graphic extends RelativeLayout {
         canvas.drawLine( xPoupe, yPoupe , xPoupe + xBarre, yPoupe - yBarre, paint1);
         //barre réel
         canvas.drawLine( xPoupe, yPoupe, xPoupe + xBarreR, yPoupe - yBarreR, paint2);
-        //tension Moteur
-        canvas.drawLine( xCenter, yFooter, xCenter+line_tension_moteur, yFooter , paint2);
+
+
+        if(retract) canvas.drawCircle( xGauche, yFooter,20, paint1);
+          if(extend)  canvas.drawCircle( xDroite, yFooter,20, paint1);
 
         super.onDraw(canvas);
     }
@@ -90,7 +94,18 @@ public class Graphic extends RelativeLayout {
         angleBarreReel= Math.toRadians(val);
     }
 
-    static public void setTensionMoteur(int val){
-        tensionMoteur= val;
+    static public void setExtend() {
+        extend=true;
+        retract=false;
+    }
+
+    static public void setRetract() {
+        extend=false;
+        retract=true;
+    }
+
+    static public void setStop() {
+        extend=false;
+        retract=false;
     }
 }

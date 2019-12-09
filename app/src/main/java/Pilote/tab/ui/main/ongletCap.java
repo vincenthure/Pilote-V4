@@ -85,6 +85,10 @@ public class ongletCap extends Fragment
             ((TextView) view.findViewById(R.id.textCap)).setText( val + "°" );
         };
 
+        static public void setinfo( String str) {
+            //((TextView) view.findViewById(R.id.textInfo)).setText( str );
+        };
+
         static public void setPause() {
             ((TextView) view.findViewById(R.id.cap)).setText(R.string.pause);
         };

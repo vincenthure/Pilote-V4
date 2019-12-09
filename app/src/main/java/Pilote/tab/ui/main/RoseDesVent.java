@@ -55,13 +55,7 @@ public class RoseDesVent extends RelativeLayout {
 
         canvas.drawCircle( xCenter, yCenter,rayon*8/10, paint);
 
-        canvas.drawLine( xCenter-tensionMax, yBas, xCenter+tensionMax, yBas , paint);
-        canvas.drawLine( xCenter-tensionMax, yBas+gap, xCenter-tensionMax, yBas-gap , paint);
-        canvas.drawLine( xCenter, yBas+gap, xCenter, yBas-gap , paint);
-        canvas.drawLine( xCenter+tensionMax, yBas+gap, xCenter+tensionMax, yBas-gap , paint);
-        canvas.drawText( "100%", xCenter+tensionMax, yBas-(2*gap), paint );
-        canvas.drawText( "0%", xCenter, yBas-(2*gap), paint );
-        canvas.drawText( "100%", xCenter-tensionMax, yBas-(2*gap), paint );
+
         super.onDraw(canvas);
     }
 }
