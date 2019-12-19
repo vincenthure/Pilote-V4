@@ -257,6 +257,12 @@ public class Main extends AppCompatActivity {
                 ongletReglages.setBarreMax( param );
                 break;
 
+            case Constante.threshold:
+                Bip.ring();
+                Log.i( "[BLUETOOTH]", "Line : threshold  "+param );
+                ongletReglages.setThreshold( param );
+                break;
+
             case Constante.capReel:
                 Graphic.setCapReel( param );
                 break;

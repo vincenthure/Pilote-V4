@@ -25,6 +25,7 @@ public class Constante {
             retarct        = 'M',
             stop           = 'N',
             info           = 'O',
+            threshold      = 'P',
 
             cap_moins_10    = 'A',
             cap_moins_1     = 'B',
@@ -41,6 +42,8 @@ public class Constante {
             cap_request     = 'M',
             reset_pid       = 'N',
             barre_max_moins = 'O',
-            barre_max_plus  = 'P';
+            barre_max_plus  = 'P',
+            threshold_moins = 'Q',
+            threshold_plus  = 'R';
 
 }

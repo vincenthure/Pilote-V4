@@ -39,6 +39,9 @@ public class ongletReglages extends Fragment {
         view.findViewById( R.id.btn_barre_plus).setOnClickListener(barre_plus_Listener);
         view.findViewById( R.id.reset).setOnClickListener(reset_Listener);
         view.findViewById( R.id.pidCap).setOnClickListener(pid_Listener);
+        view.findViewById( R.id.btn_threshold_moins).setOnClickListener(threshold_moins_Listener);
+        view.findViewById( R.id.btn_threshold_plus).setOnClickListener(threshold_plus_Listener);
+
         Main.send( Constante.pid_request );
     };
 
@@ -98,7 +101,6 @@ public class ongletReglages extends Fragment {
         }
     };
 
-
     private View.OnClickListener barre_moins_Listener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -110,6 +112,20 @@ public class ongletReglages extends Fragment {
         @Override
         public void onClick(View v) {
             Main.send( Constante.barre_max_plus );
+        }
+    };
+
+    private View.OnClickListener threshold_moins_Listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Main.send( Constante.threshold_moins );
+        }
+    };
+
+    private View.OnClickListener threshold_plus_Listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Main.send( Constante.threshold_plus );
         }
     };
 
@@ -135,5 +151,11 @@ public class ongletReglages extends Fragment {
 
         ((TextView) view.findViewById(R.id.text_BarreMax)).setText( R.string.max );
         ((TextView) view.findViewById(R.id.text_BarreMax)).append( " "+val );
+    };
+
+    static public void setThreshold( int val) {
+
+        ((TextView) view.findViewById(R.id.text_threshold)).setText( R.string.threshold );
+        ((TextView) view.findViewById(R.id.text_threshold)).append( " "+val );
     };
 }

@@ -26,5 +26,6 @@
     <string name="frequence">Frq</string>
     <string name="valide">Valide</string>
     <string name="assistant">Dans les réglages mettez KI et Kd à zero et augmentez la valeur de Kp jusqu\'à ce que le bateau fasse des lacets. Mesurez alors avec un chronomètre la période de ces lacets. Entrez ces valeurs, validez et saisissez les valeurs proposées dans les réglages.</string>
+    <string name="threshold" >Seuil :</string>
 
 </resources>

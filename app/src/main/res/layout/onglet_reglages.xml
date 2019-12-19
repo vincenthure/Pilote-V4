@@ -9,6 +9,18 @@
 
 
     <Button
+        android:id="@+id/btn_threshold_moins"
+        android:layout_width="85dp"
+        android:layout_height="32dp"
+        android:background="@drawable/round_color2_button"
+        android:text="@string/btn_moins"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_threshold"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/text_threshold" />
+
+    <Button
         android:id="@+id/btn_kp_plus"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -116,7 +128,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_kp_moins"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/pidCap" />
 
     <TextView
         android:id="@+id/text_Ki"
@@ -150,11 +162,12 @@
         android:text="@string/pid_cap"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btn_kp_plus"
+        app:layout_constraintBottom_toTopOf="@+id/btn_kp_moins"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.372" />
 
     <Button
         android:id="@+id/reset"
@@ -165,7 +178,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_BarreMax" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_threshold_moins"
+        app:layout_constraintVertical_bias="0.496" />
 
     <TextView
         android:id="@+id/textView"
@@ -176,8 +190,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/text_BarreMax"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_kd_moins" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_kd_moins"
+        app:layout_constraintVertical_bias="0.674" />
 
     <TextView
         android:id="@+id/text_BarreMax"
@@ -185,11 +201,23 @@
         android:layout_height="wrap_content"
         android:text="Max"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/reset"
+        app:layout_constraintBottom_toTopOf="@+id/text_threshold"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/text_threshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/threshold"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/reset"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_BarreMax" />
 
     <Button
         android:id="@+id/btn_barre_moins"
@@ -216,5 +244,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_barre_moins"
         app:layout_constraintTop_toTopOf="@+id/btn_barre_moins" />
+
+    <Button
+        android:id="@+id/btn_threshold_plus"
+        android:layout_width="90dp"
+        android:layout_height="32dp"
+        android:background="@drawable/round_color2_button"
+        android:text="@string/btn_plus"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_threshold_moins"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_threshold_moins"
+        app:layout_constraintTop_toTopOf="@+id/btn_threshold_moins" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
