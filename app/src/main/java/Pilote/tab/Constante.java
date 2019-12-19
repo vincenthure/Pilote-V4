@@ -4,7 +4,8 @@ package Pilote.tab;
 public class Constante {
 
     public static String
-            Adresse_Mac = "98:D3:51:FD:9D:C9",
+            //Adresse_Mac = "98:D3:51:FD:9D:C9",
+            DEVICE_NAME   = "HC-05",
             UUID        = "00001101-0000-1000-8000-00805f9b34fb";
 
     public static final char
