@@ -154,7 +154,7 @@ public class Main extends AppCompatActivity {
                 if(!mmSocket.isConnected()) {
                     btt.cancel();
                     initiateBluetoothProcess();
-                    Log.i( "[BLUETOOTH]", "is not connected" );
+                    Log.i( "[BLUETOOTH]", "socket is not connected" );
                     return;
 
                 }
