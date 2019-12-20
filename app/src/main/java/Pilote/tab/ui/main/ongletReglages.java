@@ -154,8 +154,7 @@ public class ongletReglages extends Fragment {
     };
 
     static public void setThreshold( int val) {
-
         ((TextView) view.findViewById(R.id.text_threshold)).setText( R.string.threshold );
-        ((TextView) view.findViewById(R.id.text_threshold)).append( " "+val );
+       ((TextView) view.findViewById(R.id.text_threshold)).append( " "+Double.valueOf( val )/10);
     };
 }
